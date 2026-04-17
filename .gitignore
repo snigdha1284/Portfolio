@@ -1,0 +1,11 @@
+# Dependency folders
+node_modules/
+server/node_modules/
+
+# Environment variables (Critical)
+.env
+server/.env
+
+# OS files
+.DS_Store
+Thumbs.db
