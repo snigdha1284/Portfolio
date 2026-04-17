@@ -37,9 +37,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ── Serve frontend static files ───────────────────────────────────────────────
-// Serves index.html, styles.css, script.js, assets/ from the parent folder
+// Serves index.html, styles.css, script.js, assets/ from the current folder
 const path = require('path');
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(__dirname));
 
 // ── Health check ─────────────────────────────────────────────────────────────
 app.get('/health', (_req, res) => {
