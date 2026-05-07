@@ -6,16 +6,16 @@
 
 require('dotenv').config();
 const express = require('express');
-const cors    = require('cors');
+const cors = require('cors');
 const contactRouter = require('./routes/contact');
 
-const app  = express();
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ── Startup env check ────────────────────────────────────────────────────────
 // The server will always start; email sending requires real SMTP credentials.
 (function checkEnv() {
-  const placeholders = ['your_gmail_address@gmail.com', 'your_16_char_app_password', ''];
+  const placeholders = ['snigdha5002@gmail.com', 'xrmjchxwhvbwivgp', ''];
   const smtpOk =
     process.env.SMTP_USER && !placeholders.includes(process.env.SMTP_USER) &&
     process.env.SMTP_PASS && !placeholders.includes(process.env.SMTP_PASS);
@@ -48,9 +48,9 @@ app.get('/health', (_req, res) => {
     uptime: process.uptime(),
     smtp_configured: !!(
       process.env.SMTP_USER &&
-      process.env.SMTP_USER !== 'your_gmail_address@gmail.com' &&
+      process.env.SMTP_USER !== 'snigdha5002@gmail.com' &&
       process.env.SMTP_PASS &&
-      process.env.SMTP_PASS !== 'your_16_char_app_password'
+      process.env.SMTP_PASS !== 'xrmjchxwhvbwivgp'
     ),
   });
 });
