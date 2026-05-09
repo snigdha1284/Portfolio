@@ -407,6 +407,29 @@ section { padding: var(--section-pad); }
 
 .cert-link:hover { opacity: 1; color: var(--clr-gold); }
 
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 12px 20px;
+    background: rgba(197,160,89,0.08);
+    border: 1px solid rgba(197,160,89,0.25);
+    border-radius: 6px;
+    color: var(--clr-gold);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all var(--t-fast);
+}
+
+.project-link:hover {
+    background: var(--clr-gold);
+    color: var(--clr-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(197,160,89,0.2);
+}
+
 /* ── Contact ──────────────────────────────────────────────────── */
 .contact-subtitle {
     max-width: 620px;
